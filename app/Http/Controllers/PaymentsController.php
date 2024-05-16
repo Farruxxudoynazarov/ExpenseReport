@@ -95,8 +95,9 @@ class PaymentsController extends Controller
                 $queary->whereYear('payment_date', Carbon::now()->year);
                 break;
         }
-
+        
         $statistics = $queary->get();
+        // logger($statistics);
          return response()->json($statistics);
 
 

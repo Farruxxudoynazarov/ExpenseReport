@@ -26,7 +26,7 @@ class UpdatePaymentRequest extends FormRequest
             'amount' => 'required|numeric',
             'description' => 'required|string',
             'type' => 'required|string|in:income,expense',
-            'payment_date' => 'required|date'
+            'payment_date' => 'required|date',
         ];
     }
 }
