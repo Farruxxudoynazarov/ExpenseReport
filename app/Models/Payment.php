@@ -14,7 +14,9 @@ class Payment extends Model
         'user_id',
         'category_id',
         'amount',
-        'description'
+        'description',
+        'type',
+        'payment_date'
     ];
 
     public function user(){

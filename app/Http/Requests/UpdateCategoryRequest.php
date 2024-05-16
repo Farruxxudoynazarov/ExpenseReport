@@ -22,9 +22,9 @@ class UpdateCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255',
-            'icon' => 'nullable|string|max:255',
-            'type' => 'required|in:income,expense'
+            'category_id' => 'required|',
+            'amount' => 'required|numeric',
+            'description' => 'required|string',
         ];
     }
 }

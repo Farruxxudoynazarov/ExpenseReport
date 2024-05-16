@@ -19,7 +19,6 @@ class AuthController extends Controller
         //     'name'=>'required|string',
         //     'email'=>'required|string|email|unique:users',
         //     'password'=>'required|min:8',
-        //     'password_confirmation' => 'required|same:password' // Parolni tasdiqlash qoidasini qo'shish
         // ])
 
        
@@ -55,11 +54,10 @@ class AuthController extends Controller
 
     public function logout(){
         
-        // auth()->user()->tokens()->delete();
         auth()->user()->tokens()->delete();
         
         return response()->json([
-          "message"=>"logged out"
+          "message"=>'logged out'
         ]);
     }
 

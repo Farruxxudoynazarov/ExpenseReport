@@ -13,28 +13,31 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $categories = [
-            ['name' => 'Business', 'icon' => null, 'type' => 'income'],
-            ['name' => 'Extra Income', 'icon' => null, 'type' => 'income'],
-            ['name' => 'Gifts', 'icon' => null, 'type' => 'income'],
-            ['name' => 'Loan', 'icon' => null, 'type' => 'income'],
-            ['name' => 'Salary', 'icon' => null, 'type' => 'income'],
-            ['name' => 'Other', 'icon' => null, 'type' => 'income'],
-
-            ['name' => 'Food & Drink', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Gifts', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Shopping', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Home', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Travel', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Transport', 'icon' => null, 'type' => 'expense'],
-            ['name' => 'Work', 'icon' => null, 'type' => 'expense'],
-
+        $incomeCategories = [
+            ['name' => 'Business', 'icon' => 'business-icon'],
+            ['name' => 'Extra Income', 'icon' => 'extra-income-icon'],
+            ['name' => 'Gifts', 'icon' => 'gifts-icon'],
+            ['name' => 'Loan', 'icon' => 'loan-icon'],
+            ['name' => 'Salary', 'icon' => 'salary-icon'],
+            ['name' => 'Other', 'icon' => 'other-icon'],
         ];
 
-        foreach($categories as $category){
+        $expenseCategories = [
+            ['name' => 'Food & Drink', 'icon' => 'food-drink-icon'],
+            ['name' => 'Gifts', 'icon' => 'gifts-icon'],
+            ['name' => 'Shopping', 'icon' => 'shopping-icon'],
+            ['name' => 'Home', 'icon' => 'home-icon'],
+            ['name' => 'Travel', 'icon' => 'travel-icon'],
+            ['name' => 'Transport', 'icon' => 'transport-icon'],
+            ['name' => 'Work', 'icon' => 'work-icon'],
+        ];
+
+        foreach ($incomeCategories as $category) {
             Category::create($category);
         }
 
-
+        foreach ($expenseCategories as $category) {
+            Category::create($category);
+        }
     }
 }
