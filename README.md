@@ -7,9 +7,9 @@
 
 ## Project haqida 
 
-Bu project kirim va chiqimlarni 
+Bu project kirim va chiqimlarni hamda to'lovlar va statistikalar bilan ishlaydi.
 
-### Foydalanuvchilar
+### Userlar
  
  Userlar:
  'name': 'Farrux Xudoynazarov',
